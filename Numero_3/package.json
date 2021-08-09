@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start:debug": "nodemon --inspect ./src/desafio3.js",
-    "http": "nodemon --inspect ./src/desafio3.js"
+    "start:debug": "nodemon --inspect ./desafio3.js",
+    "http": "nodemon --inspect ./desafio3.js"
   },
   "author": "",
   "license": "ISC",
