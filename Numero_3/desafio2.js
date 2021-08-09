@@ -22,13 +22,11 @@ class Contenedor {
         try {
             objeto.id = this.productos.length;
             await fs.promises.writeFile(this.nombreDeArchivo, JSON.stringify(this.productos));
-            //return objeto.id;
         } catch (error) {
             return null;
         }
     }
     async getById(num) {
-        //console.log(this.productos[0].id)
         await this.getAll(); 
         
         try {
