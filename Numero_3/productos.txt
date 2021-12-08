@@ -1,1 +1,0 @@
-[{"title":"manzana","price":100,"url":"otraURL","id":1},{"title":"Banana","price":60,"url":"otraURL","id":2},{"title":"Naranja","price":80,"url":"otraURL","id":3}]
