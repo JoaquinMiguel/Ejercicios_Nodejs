@@ -1,0 +1,1 @@
+[{"title":"manzana","price":100,"url":"https://media.istockphoto.com/vectors/simple-apple-in-flat-style-vector-illustration-vector-id1141529240"},{"title":"Banana","price":60,"url":"otraURL"},{"title":"Naranja","price":80,"url":"otraURL"}]

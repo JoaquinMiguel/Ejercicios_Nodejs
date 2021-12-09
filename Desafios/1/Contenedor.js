@@ -14,7 +14,7 @@ class Contenedor{
         try{
             fs.promises.writeFile(this.nombreArch, JSON.stringify(this.productos))
 
-            console.log(`Archivo guardado`);
+            //console.log(`Archivo guardado`);
             this.id++;
             return console.log(`ID asignado: ${this.id}`);
         } catch (error){
@@ -64,3 +64,5 @@ class Contenedor{
         }
     }
 }
+
+module.exports = Contenedor;
