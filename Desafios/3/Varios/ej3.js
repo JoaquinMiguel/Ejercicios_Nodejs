@@ -45,4 +45,5 @@ personas.post('/personas', (req, res) =>{
 })
 
 app.use('/mascotas', mascotas);
+app.use('/personas', personas);
 
