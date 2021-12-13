@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.13"
+  },
+  "dependencies": {
+    "multer": "^1.4.4"
   }
 }

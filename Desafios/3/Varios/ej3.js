@@ -51,7 +51,7 @@ personas.post('/', (req, res) =>{
         res.status(200).send('Esta todo en orden');
 
     }else res.status(400).send('Tipo de dato erroneo');
-})
+});
 
 app.get('/public', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
