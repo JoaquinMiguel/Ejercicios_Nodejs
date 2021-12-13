@@ -1,49 +1,59 @@
 const express = require('express');
+const { isQualifiedName } = require('typescript');
 const { Router } = express;   //Router = express.Router;
 
 const app = express();
+//const __dirname = './';
 const mascotas = new Router();
 const personas = new Router();
 
-app.use(express.json());        // es un must para q entienda JOSN
-app.use(express.urlencoded({extended: true}));
-
-app.listen(8083, () =>{ console.log(' server activo')});
-
+const listaP =[];
 const listaM = [{
     nombre: "jorge",
     raza: "manco",
 }];
 
-const listaP =[];
+app.use(express.json());        // es un must para q entienda JOSN
+app.use(express.urlencoded({extended: true}));
 
-mascotas.get('/mascotas', (req, res) =>{
+app.use('/static', express.static(__dirname + '/public')); 
+//app.use(express.static('public'))
+
+app.use('/mascotas', mascotas);
+app.use('/personas', personas);
+
+app.listen(8083, () =>{ console.log(' server activo')});
+
+mascotas.get('/', (req, res) =>{
     res.send(listaM);
 });
 
-mascotas.post('/mascotas', (req, res) =>{
+mascotas.post('/', (req, res) =>{
     const {nombre, raza} = req.body;
 
-    if (typeof nombre === 'string' && typeof raza === 'string'){
+    if (isNaN(nombre) && isNaN(raza)){
         listaM.push({nombre: nombre, raza: raza});
         res.status(200).send('Esta todo en orden');
+
     }else res.status(400).send('Tipo de dato erroneo');
     
 })
 
-personas.get('/personas', (req, res) =>{
+personas.get('/', (req, res) =>{
     res.send(listaP);
 })
 
-personas.post('/personas', (req, res) =>{
+personas.post('/', (req, res) =>{
     const {nombre, apellido} = req.body;
 
-    if (typeof nombre === 'string' && typeof apellido === 'string'){
+    if (isNaN(nombre) && isNaN(apellido)){
         listaM.push({nombre: nombre, apellido: apellido});
         res.status(200).send('Esta todo en orden');
+
     }else res.status(400).send('Tipo de dato erroneo');
 })
 
-app.use('/mascotas', mascotas);
-app.use('/personas', personas);
+app.get('/public', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+});
 

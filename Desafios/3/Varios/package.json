@@ -5,7 +5,7 @@
   "main": "get_endpoints.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect ./ej2.js"
+    "start": "nodemon --inspect ./ej3.js"
   },
   "keywords": [],
   "author": "",
