@@ -2,7 +2,7 @@ const express = require('express');
 const { Router } = require('express');
 const path = require('path');
 const { uploadSingle } = require('./middleware/uploadFile');
-//const validateData
+const validateData = require('./middleware/validate');
 
 const app = express();
 const PORT = 8080;
@@ -38,7 +38,7 @@ routerProducts.get('/:id', (req, res) =>{    // segun id
      
 });
 
-routerProducts.post('/', uploadSingle, (req, res) =>{   //hacer un middleware de validacion
+routerProducts.post('/', uploadSingle, validateData,(req, res) =>{   //hacer un middleware de validacion
     const body = req.body;
     body.id = numId;
     listProducts.push(body);
