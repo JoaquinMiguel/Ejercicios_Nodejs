@@ -12,10 +12,9 @@ app.use(express.urlencoded({extended: true}));
 
 app.listen(PORT, ()=> console.log(`serven escuchando en: http://localhost:${PORT}`));
 
-
 (async function readData(){
     try{
-        const data = await fs.promises.readFile('./src/personas.txt', 'utf-8');
+        const data = await fs.promises.readFile(__dirname + '/personas.txt', 'utf-8');
         personas = JSON.parse(data);
     }catch (error){
         console.log(error);

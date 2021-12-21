@@ -9,7 +9,7 @@
 <body>
     <h1>Especie de formulario</h1>
     
-    <form action="/api/productos" method="post">
+    <form action="/api/productos" enctype="multipart/form-data" method="post">
         <label>Titulo del producto: </label>
         <input type="text" name="title" min="3"><br><br> <!-- min?? -->
 
@@ -17,7 +17,7 @@
         <input type="number" name="price" min="0"><br><br>
 
         <label>Imagen:</label>
-        <input type="file" name="thumbnail"><br><br>
+        <input type="file" name="thumbnail" ><br><br>
 
         <button type="submit">Enviar</button>
     </form>
