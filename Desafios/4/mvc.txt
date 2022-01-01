@@ -1,0 +1,4 @@
+npm i express-handlebars
+
+-No es muy utilizado los custo porq se tiene q replazar cada una de
+las cosas para que se envie.
