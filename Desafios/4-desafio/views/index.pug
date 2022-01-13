@@ -1,0 +1,10 @@
+html 
+  head <!--no se que hace INCLUDE-->
+    title Creacion de productos 
+    include ../partials/menu.pug  
+  body 
+    each producto  in unProducto 
+      div
+        h3=`Nombre: ${producto.name}`
+        //h3 Producto ${producto.name}
+        a(href=`/producto/${producto.id}`) Informacion

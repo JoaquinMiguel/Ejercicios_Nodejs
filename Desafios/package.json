@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect ./4.PUG/src/server.js"
+    "start": "nodemon --inspect ./4-desafio/src/server.js"
   },
   "keywords": [],
   "author": "",
