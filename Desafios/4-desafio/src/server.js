@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname,'../partials/menu'))
 });
 
-app.get('/productos', (req, res) =>{
+app.get('/productos', async (req, res) =>{ // async (req, res) PAPAAA
 
-    async function imprimir(){
+    //async function imprimir(){
         const unProducto = await unaLista.getAll();
 
         if(unProducto == null) res.status(400).send('No existe documentacion, ingrese un producto')
@@ -33,24 +33,24 @@ app.get('/productos', (req, res) =>{
                 unProducto,
             })
         }
-    }
-    imprimir();
+   // }
+    //imprimir();
     
 })
 
-app.get('/producto/:id', (req, res) =>{
+app.get('/producto/:id', async (req, res) =>{
 
-    async function imprimir(){
+   // async function imprimir(){
         const {id} = req.params;
         let product = await unaLista.getById(id);
     
-        console.log(product, 'la posta');
+        //console.log(product, 'la posta');
         res.render('productos', {
             product
         })
         
-    }
-    imprimir();
+    //}
+    //imprimir();
 })
 
 app.get('/formulario', (req, res) =>{
