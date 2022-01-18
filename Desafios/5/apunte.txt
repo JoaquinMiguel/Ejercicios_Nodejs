@@ -1,0 +1,14 @@
+Web Socket ---> npm i socket.io
+Protocolo de red basado en TCP. Establece conecxion entre 2 puntos llamado SOCKET
+-conexion abierta, se puede mandar y recibir al mismo tiempo
+- Accede mas rapido a los datos
+- seria como hablar por telefono,
+  en HTTP seria como un walkie talkie
+- No se sustituyen completamente, en otros casos se complementan. HTTP + websocket
+
+require:  socket.io (80)
+          tw = require('node-tweet-stream')(cfg)
+
+minuto 37
+
+lo deje en minuto  57

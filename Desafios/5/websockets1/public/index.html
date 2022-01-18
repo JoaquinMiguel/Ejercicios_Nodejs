@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Websockets1</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Websockets</h1>
+  <fieldset>
+    <label for="message">Mensaje</label>
+    <input type="text" name="mensaje" id="message">
+    <button id="send">Enviar</button>
+  </fieldset>
+  <fieldset>
+    <ul id='messages'>
+
+    </ul>
+  </fieldset>
+  <script>
+    const socket = io()
+
+    const input = document.getElementById('message');
+    input.addEventListener('input', ()=>{
+      socket.emit('messageFront', input.value)  //lee lo se escribe en el input. se puede chequear con console
+    })
+    socket.on('connectionMessage', (data) =>{
+      console.log(data)
+      alert(data)
+    })
+  </script>
+</body>
+</html>

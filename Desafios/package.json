@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect ./4-desafio/src/server.js"
+    "start": "nodemon --inspect ./5/websockets1/server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,7 @@
     "multer": "^1.4.4",
     "node-emoji": "^1.11.0",
     "pug": "^3.0.2",
-    "uuid": "^8.3.2"
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "eslint": "^8.5.0",
